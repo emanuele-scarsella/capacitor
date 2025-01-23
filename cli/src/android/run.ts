@@ -49,7 +49,7 @@ export async function runAndroid(
   const nativeRunArgs = ['android', '--app', apkPath, '--target', target.id];
 
   if (selectedPorts) {
-    nativeRunArgs.push('--forward', `${selectedPorts}`);
+    selectedPorts.forEach((selectedPort) => nativeRunArgs.push('--forward', `${selectedPort}`));
   }
 
   debug('Invoking native-run with args: %O', nativeRunArgs);

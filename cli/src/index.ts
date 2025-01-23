@@ -190,7 +190,7 @@ export function runProgram(config: Config): void {
     .addOption(new Option('--json').hideHelp())
     .option('--target <id>', 'use a specific target')
     .option('--no-sync', `do not run ${c.input('sync')}`)
-    .option('--forwardPorts <port:port>', 'Automatically run "adb reverse" for better live-reloading support')
+    .option('--forwardPorts <port:port...>', 'Automatically run "adb reverse" for better live-reloading support')
     .option('-l, --live-reload', 'Enable Live Reload')
     .option('--host <host>', 'Host used for live reload')
     .option('--port <port>', 'Port used for live reload')
